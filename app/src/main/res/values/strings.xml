@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Ficha Programador</string>
+
+    <string name="btn_nombre">Name</string>
+    <string name="btn_apellidos">Surname</string>
+    <string name="btn_curso">Course</string>
+    <string name="btn_lenguages">Languages</string>
+    <string name="btn_nuevo">New registration</string>
+    <string name="ad_nuevo_tit">New Inscription</string>
+    <string name="ad_nuevo_msg" >Do you want to create a new registration?</string>
+    <string name="ad_nuevo_no" >No</string>
+    <string name="ad_nuevo_si" >Yes</string>
+    <string name="ad_nombre_no" >Cancel</string>
+    <string name="ad_nombre_si" >Accept</string>
+    <string name="ad_nombre_tit">Enter data</string>
+    <string name="ad_curso_tit" >Select course</string>
+    <string name="ad_curso_no">Cancel</string>
+    <string name="ad_curso_si">Accept</string>
+    <string name="ad_lenguajes_tit">Select languages</string>
+    <string name="ad_lenguajes_no">Cancel</string>
+    <string name="ad_lenguajes_si">Accept</string>
+    <string name="ad_lenguajes_neutro">Clear all</string>
+</resources>

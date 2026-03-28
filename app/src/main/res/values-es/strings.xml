@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ficha Programador</string>
+
+    <string name="btn_nombre">Nombre</string>
+    <string name="btn_apellidos">Apellidos</string>
+    <string name="btn_curso">Curso</string>
+    <string name="btn_lenguages">Lenguages</string>
+    <string name="btn_nuevo">Nuevo registro</string>
+    <string name="ad_nuevo_tit">Nuevo Registro</string>
+    <string name="ad_nuevo_msg" >¿Quieres crear un nuevo registro?</string>
+    <string name="ad_nuevo_no" >No</string>
+    <string name="ad_nuevo_si" >Sí</string>
+    <string name="ad_nombre_tit" >Introduzca el dato</string>
+    <string name="ad_nombre_no" >Cancelar</string>
+    <string name="ad_nombre_si" >Aceptar</string>
+    <string name="ad_curso_tit" >Seleccione curso</string>
+    <string name="ad_curso_no">Cancelar</string>
+    <string name="ad_curso_si">Aceptar</string>
+    <string name="ad_lenguajes_tit">Seleccione lenguajes</string>
+    <string name="ad_lenguajes_no">Cancelar</string>
+    <string name="ad_lenguajes_si">Aceptar</string>
+    <string name="ad_lenguajes_neutro">Limpiar todos</string>
+</resources>
