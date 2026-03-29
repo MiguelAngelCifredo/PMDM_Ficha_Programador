@@ -7,22 +7,23 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_V2 extends AppCompatActivity {
 
-    // Listas de recursos (Cargadas una sola vez)
-    static String[] listaDeCursos = null;
-    static String[] listaDeLenguajes = null;
+    // Listas de recursos (NO static)
+    private String[] listaDeCursos;
+    private String[] listaDeLenguajes;
 
-    TextView txtNombre, txtCurso, txtLenguajes;
+    private TextView txtNombre, txtCurso, txtLenguajes;
 
-    // Variables de estado (Persistencia)
-    static String nombre = "";
-    static int cursoSeleccionado = -1;
-    static boolean[] lenguajesSeleccionados = null;
+    // Variables de estado (NO static)
+    private String nombre = "";
+    private int cursoSeleccionado = -1;
+    private boolean[] lenguajesSeleccionados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initComponents();
+
+        // Si venimos de un giro de pantalla, recuperamos los datos
+        if (savedInstanceState != null) {
+            nombre = savedInstanceState.getString("nombre", "");
+            cursoSeleccionado = savedInstanceState.getInt("curso", -1);
+            lenguajesSeleccionados = savedInstanceState.getBooleanArray("lenguajes");
+        }
+
         mostrarDatosEnPantalla();
+    }
+
+    // Guardamos los datos justo antes de que la Activity se destruya por un giro de pantalla.
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("nombre", nombre);
+        outState.putInt("curso", cursoSeleccionado);
+        outState.putBooleanArray("lenguajes", lenguajesSeleccionados);
     }
 
     private void initComponents() {
